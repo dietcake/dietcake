@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__).'/core/inflector.php';
+require_once __DIR__.'/bootstrap.php';
 
 class InflectorTest extends PHPUnit_Framework_TestCase
 {

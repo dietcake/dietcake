@@ -1,11 +1,5 @@
 <?php
-require_once dirname(__DIR__).'/core/dispatcher.php';
-require_once dirname(__DIR__).'/core/param.php';
-require_once dirname(__DIR__).'/core/exception.php';
-require_once dirname(__DIR__).'/core/controller.php';
-require_once dirname(__DIR__).'/core/view.php';
-require_once dirname(__DIR__).'/core/inflector.php';
-define('DC_ACTION', 'dc_action');
+require_once __DIR__.'/bootstrap.php';
 
 class DispatcherTest extends PHPUnit_Framework_TestCase
 {

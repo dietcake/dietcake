@@ -1,5 +1,5 @@
 <?php
-require_once dirname(__DIR__).'/core/param.php';
+require_once __DIR__.'/bootstrap.php';
 
 class ParamTest extends PHPUnit_Framework_TestCase
 {

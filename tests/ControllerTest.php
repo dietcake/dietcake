@@ -1,6 +1,5 @@
 <?php
-require_once dirname(__DIR__).'/core/controller.php';
-require_once dirname(__DIR__).'/core/view.php';
+require_once __DIR__.'/bootstrap.php';
 
 class ControllerTest extends PHPUnit_Framework_TestCase
 {
