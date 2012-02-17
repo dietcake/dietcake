@@ -4,4 +4,4 @@ php:
   - 5.3
   - 5.4
 
-script: phpunit -c ./tests/phpunit.xml
+script: phpunit --coverage-text -c ./tests/phpunit.xml
