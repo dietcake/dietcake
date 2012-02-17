@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/bootstrap.php';
+require_once dirname(__FILE__).'/bootstrap.php';
 
 class ModelTest extends PHPUnit_Framework_TestCase
 {
