@@ -13,30 +13,30 @@ class ModelTest extends PHPUnit_Framework_TestCase
 
     public function test_validate()
     {
-        $player = new Player;
-        $player->name = '';
-        $this->assertFalse($player->validate());
-        $this->assertTrue($player->hasError());
+        $test_player = new TestPlayer;
+        $test_player->name = '';
+        $this->assertFalse($test_player->validate());
+        $this->assertTrue($test_player->hasError());
 
-        $player->name = 'aa';
-        $this->assertFalse($player->validate());
-        $this->assertTrue($player->hasError());
+        $test_player->name = 'aa';
+        $this->assertFalse($test_player->validate());
+        $this->assertTrue($test_player->hasError());
 
-        $player->name = 'aaa';
-        $this->assertTrue($player->validate());
-        $this->assertFalse($player->hasError());
+        $test_player->name = 'aaa';
+        $this->assertTrue($test_player->validate());
+        $this->assertFalse($test_player->hasError());
 
-        $player->name = '0123456789123456';
-        $this->assertTrue($player->validate());
-        $this->assertFalse($player->hasError());
+        $test_player->name = '0123456789123456';
+        $this->assertTrue($test_player->validate());
+        $this->assertFalse($test_player->hasError());
 
-        $player->name = '01234567891234567';
-        $this->assertFalse($player->validate());
-        $this->assertTrue($player->hasError());
+        $test_player->name = '01234567891234567';
+        $this->assertFalse($test_player->validate());
+        $this->assertTrue($test_player->hasError());
     }
 }
 
-class Player extends Model
+class TestPlayer extends Model
 {
     public $validation = array(
         'name' => array(
