@@ -15,6 +15,8 @@ class Model
      *
      * 複数のメンバの値を一度にセットできます。
      *
+     * @param array $data
+     *
      */
     public function set(array $data)
     {
@@ -27,6 +29,7 @@ class Model
      * メンバの値が正しいか検証する
      *
      * @return boolean 正しいとき true、それ以外のとき false
+     * @throws DCException
      */
     public function validate()
     {
