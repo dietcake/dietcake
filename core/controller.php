@@ -3,7 +3,9 @@ class Controller
 {
     public $name;           // コントローラ名
     public $action;         // アクション名
-    public $view;           // ビュー
+
+    /** @var View $view */
+    public $view;           // ビュークラスのインスタンス
 
     public $default_view_class = 'View';     // デフォルトのビュークラス名
 

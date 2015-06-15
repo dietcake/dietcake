@@ -20,6 +20,9 @@ class Dispatcher
      *
      * url は必ず http://example.com/index.php?dc_action=controller-name/action-name の形
      *
+     * @param string $action
+     * @return array
+     * @throws DCException
      */
     public static function parseAction($action)
     {

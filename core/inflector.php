@@ -1,11 +1,19 @@
 <?php
 class Inflector
 {
+    /**
+     * @param string $str
+     * @return string
+     */
     public static function camelize($str)
     {
         return str_replace(' ', '', ucwords(str_replace('_', ' ', $str)));
     }
 
+    /**
+     * @param string $str
+     * @return string
+     */
     public static function underscore($str)
     {
         /* [A-Z]+ と [A-Z][a-z]* を単語とみなす。
