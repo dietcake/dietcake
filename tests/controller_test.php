@@ -1,7 +1,9 @@
 <?php
 require_once dirname(__FILE__).'/bootstrap.php';
 
-class ControllerTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class ControllerTest extends TestCase
 {
     public function test_isAction()
     {

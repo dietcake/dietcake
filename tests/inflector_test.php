@@ -1,7 +1,9 @@
 <?php
 require_once dirname(__FILE__).'/bootstrap.php';
 
-class InflectorTest extends PHPUnit_Framework_TestCase
+use PHPUnit\Framework\TestCase;
+
+class InflectorTest extends TestCase
 {
     public function test_camelize()
     {
