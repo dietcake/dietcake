@@ -25,7 +25,7 @@ class Controller
 
     public function dispatchAction()
     {
-        if (!self::isAction($this->action)) {
+        if (!static::isAction($this->action)) {
             // アクション名が予約語などで正しくないとき
             throw new DCException('invalid action name');
         } 

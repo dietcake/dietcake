@@ -24,11 +24,11 @@ class View
     {
         $action = is_null($action) ? $this->controller->action : $action;
         if (strpos($action, '/') === false) {
-            $view_filename = VIEWS_DIR . $this->controller->name . '/' . $action . self::$ext;
+            $view_filename = VIEWS_DIR . $this->controller->name . '/' . $action . static::$ext;
         } else {
-            $view_filename = VIEWS_DIR . $action . self::$ext;
+            $view_filename = VIEWS_DIR . $action . static::$ext;
         }
-        $content = self::extract($view_filename, $this->vars);
+        $content = static::extract($view_filename, $this->vars);
         $this->controller->output .= $content;
     }
 
