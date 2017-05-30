@@ -3,9 +3,9 @@ class Dispatcher
 {
     public static function invoke()
     {
-        list($controller_name, $action_name) = self::parseAction(Param::get(DC_ACTION));
+        list($controller_name, $action_name) = static::parseAction(Param::get(DC_ACTION));
 
-        $controller = self::getController($controller_name);
+        $controller = static::getController($controller_name);
 
         $controller->action = $action_name;
         $controller->beforeFilter();
