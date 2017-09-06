@@ -6,16 +6,17 @@ php:
   - 5.6
   - 7.0
   - 7.1
+  - hhvm
 
 script:
   - composer install
   - ./vendor/bin/phpunit -v --coverage-text -c ./tests/phpunit.xml
 
 matrix:
-  allow_failures:
-    - php: hhvm
   include:
     - os: linux
       sudo: required
       dist: precise
       php: 5.3
+  allow_failures:
+    - php: hhvm
