@@ -8,6 +8,10 @@ php:
   - 7.1
   - hhvm
 
+cache:
+  directories:
+  - $HOME/.composer/cache/files
+
 script:
   - composer install
   - ./vendor/bin/phpunit -v --coverage-text -c ./tests/phpunit.xml
