@@ -10,7 +10,7 @@ php:
 
 script:
   - composer install
-  - ./vendor/bin/phpunit -v --coverage-text -c ./tests/phpunit.xml
+  - ./vendor/bin/phpunit -v --coverage-text
 
 matrix:
   include:
