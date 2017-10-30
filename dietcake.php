@@ -10,7 +10,7 @@ mb_internal_encoding('UTF-8');
 define('TIME_START', microtime(true));
 define('DC_ACTION', 'dc_action');
 
-define('DC_DIR', dirname(__FILE__).'/');
+define('DC_DIR', __DIR__.'/');
 define('DC_CORE_DIR', DC_DIR.'core/');
 define('CONFIG_DIR', APP_DIR.'config/');
 define('CONTROLLERS_DIR', APP_DIR.'controllers/');
