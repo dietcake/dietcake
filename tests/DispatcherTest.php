@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/bootstrap.php';
+namespace DietCake;
 
 use PHPUnit\Framework\TestCase;
 
@@ -13,7 +13,7 @@ class DispatcherTest extends TestCase
     }
 
     /**
-     * @expectedException DCException
+     * @expectedException \DietCake\DCException
      */
     public function test_parseAction_02()
     {
@@ -22,11 +22,12 @@ class DispatcherTest extends TestCase
 
     public function test_getController()
     {
-        $this->assertTrue(Dispatcher::getController('hello') instanceof HelloController);
+        require_once __DIR__ . '/globalnamespace/HelloController.php';
+        $this->assertTrue(Dispatcher::getController('hello') instanceof \HelloController);
     }
 
     /**
-     * @expectedException DCException
+     * @expectedException \DietCake\DCException
      */
     public function test_getController_02()
     {
@@ -34,6 +35,3 @@ class DispatcherTest extends TestCase
     }
 }
 
-class HelloController extends Controller
-{
-}

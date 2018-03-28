@@ -1,4 +1,5 @@
 <?php
-class DCException extends Exception
+
+class DCException extends DietCake\DCException
 {
 }

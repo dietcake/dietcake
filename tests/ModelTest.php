@@ -1,5 +1,5 @@
 <?php
-require_once __DIR__.'/bootstrap.php';
+namespace DietCake;
 
 use PHPUnit\Framework\TestCase;
 
@@ -15,7 +15,8 @@ class ModelTest extends TestCase
 
     public function test_validate()
     {
-        $test_player = new TestPlayer;
+        require_once __DIR__.'/globalnamespace/TestPlayer.php';
+        $test_player = new \TestPlayer;
         $test_player->name = '';
         $this->assertFalse($test_player->validate());
         $this->assertTrue($test_player->hasError());
@@ -36,19 +37,4 @@ class ModelTest extends TestCase
         $this->assertFalse($test_player->validate());
         $this->assertTrue($test_player->hasError());
     }
-}
-
-class TestPlayer extends Model
-{
-    public $validation = array(
-        'name' => array(
-            'between' => array('validate_between', 3, 16),
-        ),
-    );
-}
-
-function validate_between($check, $min, $max)
-{
-    $length = mb_strlen($check);
-    return $length >= $min && $length <= $max;
 }
