@@ -3,7 +3,7 @@
     "description": "Super fast MVC framework for PHP",
     "type": "library",
     "require-dev": {
-        "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0"
+        "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.0"
     },
     "license": "MIT",
     "authors": [
