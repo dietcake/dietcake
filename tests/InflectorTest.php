@@ -5,12 +5,12 @@ use PHPUnit\Framework\TestCase;
 
 class InflectorTest extends TestCase
 {
-    public function test_camelize()
+    public function testCamelize()
     {
         $this->assertEquals('PlainText', Inflector::camelize('plain_text'));
     }
 
-    public function test_underscore()
+    public function testUnderscore()
     {
         $this->assertEquals('plain_text', Inflector::underscore('PlainText'));
         $this->assertEquals('foo_bar_hoge', Inflector::underscore('FooBarHoge'));

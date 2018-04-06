@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 class ModelTest extends TestCase
 {
-    public function test_set()
+    public function testSet()
     {
         $model = new Model;
         $model->set(array('foo' => 200, 'bar' => 'test'));
@@ -13,7 +13,7 @@ class ModelTest extends TestCase
         $this->assertEquals('test', $model->bar);
     }
 
-    public function test_validate()
+    public function testValidate()
     {
         require_once __DIR__.'/globalnamespace/TestPlayer.php';
         $test_player = new \TestPlayer;

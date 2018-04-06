@@ -41,7 +41,9 @@ class Model
 
         $errors = 0;
         foreach ($members as $member => $v) {
-            if (!isset($this->validation[$member])) continue;
+            if (!isset($this->validation[$member])) {
+                continue;
+            }
             foreach ($this->validation[$member] as $rule_name => $args) {
                 $validate_func = array_shift($args);
                 if (method_exists($this, $validate_func)) {
@@ -69,10 +71,14 @@ class Model
      */
     public function hasError()
     {
-        if (empty($this->validation_errors)) return false;
+        if (empty($this->validation_errors)) {
+            return false;
+        }
         foreach ($this->validation_errors as $v) {
             foreach ($v as $w) {
-                if ($w) return true;
+                if ($w) {
+                    return true;
+                }
             }
         }
         return false;

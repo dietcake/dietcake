@@ -10,7 +10,7 @@ class ParamTest extends TestCase
         require_once __DIR__.'/globalnamespace/functions.php';
     }
 
-    public function test_get()
+    public function testGet()
     {
         $_REQUEST['foo'] = 200;
         $this->assertEquals(200, Param::get('foo'));
@@ -23,7 +23,7 @@ class ParamTest extends TestCase
         $this->assertEquals('default', Param::get('bar', 'default'));
     }
 
-    public function test_params()
+    public function testParams()
     {
         $_REQUEST = array();
 

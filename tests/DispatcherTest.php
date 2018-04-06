@@ -5,7 +5,7 @@ use PHPUnit\Framework\TestCase;
 
 class DispatcherTest extends TestCase
 {
-    public function test_parseAction()
+    public function testParseAction()
     {
         $this->assertEquals(array('top', 'index'), Dispatcher::parseAction('top/index'));
         $this->assertEquals(array('player', 'view_record'), Dispatcher::parseAction('player/view_record'));
@@ -15,12 +15,12 @@ class DispatcherTest extends TestCase
     /**
      * @expectedException \DietCake\DCException
      */
-    public function test_parseAction_02()
+    public function testParseAction02()
     {
         Dispatcher::parseAction('top');
     }
 
-    public function test_getController()
+    public function testGetController()
     {
         require_once __DIR__ . '/globalnamespace/HelloController.php';
         $this->assertTrue(Dispatcher::getController('hello') instanceof \HelloController);
@@ -29,9 +29,8 @@ class DispatcherTest extends TestCase
     /**
      * @expectedException \DietCake\DCException
      */
-    public function test_getController_02()
+    public function testGetController_02()
     {
         Dispatcher::getController('foo');
     }
 }
-
