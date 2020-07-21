@@ -19,5 +19,3 @@ matrix:
       sudo: required
       dist: precise
       php: 5.3
-  allow_failures:
-    - php: hhvm
