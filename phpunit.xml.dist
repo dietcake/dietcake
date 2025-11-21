@@ -1,5 +1,13 @@
-<phpunit bootstrap="./tests/bootstrap.php" stopOnFailure="false" colors="true">
-  <testsuite name="Test Suite">
-    <directory suffix=".php">./tests</directory>
-  </testsuite>
+<?xml version="1.0" encoding="UTF-8"?>
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         bootstrap="./tests/bootstrap.php"
+         stopOnFailure="false"
+         colors="true"
+         cacheDirectory=".phpunit.cache">
+  <testsuites>
+    <testsuite name="Test Suite">
+      <directory suffix=".php">./tests</directory>
+    </testsuite>
+  </testsuites>
 </phpunit>

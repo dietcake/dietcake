@@ -2,8 +2,11 @@
     "name": "dietcake/dietcake",
     "description": "Super fast MVC framework for PHP",
     "type": "library",
+    "require": {
+        "php": ">=7.4"
+    },
     "require-dev": {
-        "phpunit/phpunit": "^4.8.35 || ^5.7 || ^6.0 || ^7.0"
+        "phpunit/phpunit": "^9.6 || ^10.0 || ^11.0"
     },
     "autoload": {
         "classmap": [
