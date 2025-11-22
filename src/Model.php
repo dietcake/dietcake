@@ -1,6 +1,7 @@
 <?php
 namespace DietCake;
 
+#[AllowDynamicProperties]
 class Model
 {
     public $id;

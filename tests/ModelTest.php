@@ -15,6 +15,7 @@ class ModelTest extends TestCase
 
     public function testValidate()
     {
+        require_once __DIR__.'/globalnamespace/functions.php';
         require_once __DIR__.'/globalnamespace/TestPlayer.php';
         $test_player = new \TestPlayer;
         $test_player->name = '';

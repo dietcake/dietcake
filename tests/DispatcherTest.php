@@ -12,11 +12,9 @@ class DispatcherTest extends TestCase
         $this->assertEquals(array('event_top', 'index'), Dispatcher::parseAction('event/top/index'));
     }
 
-    /**
-     * @expectedException \DietCake\DCException
-     */
     public function testParseAction02()
     {
+        $this->expectException(DCException::class);
         Dispatcher::parseAction('top');
     }
 
@@ -26,11 +24,9 @@ class DispatcherTest extends TestCase
         $this->assertTrue(Dispatcher::getController('hello') instanceof \HelloController);
     }
 
-    /**
-     * @expectedException \DietCake\DCException
-     */
     public function testGetController_02()
     {
+        $this->expectException(DCException::class);
         Dispatcher::getController('foo');
     }
 }
