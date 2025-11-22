@@ -25,10 +25,9 @@ jobs:
         uses: shivammathur/setup-php@v2
         with:
           php-version: ${{ matrix.php-version }}
-          coverage: xdebug
 
       - name: Install dependencies
         run: composer install --prefer-dist --no-progress
 
       - name: Run tests
-        run: ./vendor/bin/phpunit --coverage-text
+        run: ./vendor/bin/phpunit
