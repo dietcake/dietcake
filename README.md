@@ -1,5 +1,5 @@
 DietCake
 ========
 
-[![Build Status](https://secure.travis-ci.org/dietcake/dietcake.png?branch=master)](http://travis-ci.org/dietcake/dietcake)
+[![Tests](https://github.com/dietcake/dietcake/actions/workflows/test.yml/badge.svg)](https://github.com/dietcake/dietcake/actions/workflows/test.yml)
 
