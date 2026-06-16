@@ -21,5 +21,6 @@ class InflectorTest extends TestCase
         $this->assertEquals('a_to_z', Inflector::underscore('AToZ'));
         $this->assertEquals('parse_url', Inflector::underscore('ParseURL'));
         $this->assertEquals('take_a_look', Inflector::underscore('TakeALook'));
+        $this->assertEquals('foo_v2_bar', Inflector::underscore('FooV2Bar'));
     }
 }
